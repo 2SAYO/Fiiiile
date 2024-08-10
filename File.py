@@ -18,7 +18,7 @@ def animation(u):
 	for e in u + "\n":sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
 def back():
     main_menu()
-def linex():
+def syline():
 	print('\x1b[1;32m——\x1b[1;97m——\x1b[38;5;196m——\x1b[1;33m——\x1b[1;96m——\x1b[1;34m——\x1b[1;92m\x1b[38;5;212m——\x1b[38;5;205m——\x1b[1;92m\x1b[38;5;208m——\x1b[1;96m——\x1b[1;33m——\x1b[38;5;196m——\x1b[1;97m——\x1b[38;5;205m——\x1b[1;32m——\x1b[38;5;196m——\x1b[1;97m——\x1b[38;5;205m——\x1b[1;32m——')
 def contact():
 	os.system('')
@@ -88,7 +88,7 @@ class login():
 		po = json.load(p)
 		if 'access_token' in po:
 			toke=po['access_token']
-			linex()
+			syline()
 			animation(f' [{B}•{W}] LOGIN DONE RERUN ')
 			open('.token.txt','w').write(toke)
 			exit()
@@ -97,7 +97,7 @@ class login():
 				print('\033[1;33m ACCOUNT IS IN CHECKPOINT\033[0m')
 				exit(em+'|'+ps)
 			else:
-				linex()
+				syline()
 				exit('\x1b[1;97m𝐖𝐎𝐑𝐍𝐆 𝐄𝐌𝐈𝐋 𝐎𝐑 𝐏𝐀𝐒𝐒')
 	def login_epa2(self):
 		system('clear');
@@ -141,14 +141,14 @@ class login():
 		system('clear');print(logo)
 		print(' [\u001b[36m𝟏\033[1;37m] 𝐋𝐎𝐆𝐈𝐍 𝐈𝐃/𝐏𝐀𝐒𝐒 ')
 		print(' [\u001b[36m𝟐\033[1;37m] 𝐄𝐍𝐓𝐄𝐑 𝐓𝐎 𝐁𝐀𝐂𝐊 ')
-		linex()
+		syline()
 		menu = input('\x1b[1;32m𝐂 \x1b[1;97m𝐇 \x1b[38;5;196m𝐎 \x1b[1;33m𝐎 \x1b[1;96m𝐒 \x1b[1;34m𝐄 \x1b[1;97m:\x1b[38;5;196m ')
 		if menu in ['01', '1', 'A', 'a']:
 			login().lo_epa()
 		if menu in ['02', '2', 'B', 'b']:
 			back()
 		else:
-			linex()
+			syline()
 			animation(' 𝐖𝐎𝐑𝐍𝐆 𝐒𝐄𝐋𝐄𝐂𝐓! ')
 			time.sleep(1)
 			login_WALA()
@@ -158,7 +158,7 @@ def main_menu():
 	print(' [𝟏] 𝐂𝐑𝐄𝐀𝐓 𝐈𝐃𝐒 𝐅𝐈𝐋𝐄 ')
 	print(' [𝟐] 𝐑𝐄𝐌𝐎𝐕𝐄 𝐃𝐔𝐏𝐋𝐈𝐂𝐀𝐓𝐄𝐒 𝐈𝐃𝐒 ')
 	print(' [𝟑] 𝐋𝐎𝐆𝐎𝐔𝐓')
-	linex()
+	syline()
 	xo = input(f'\x1b[1;32m𝐂 \x1b[1;97m𝐇 \x1b[38;5;196m𝐎 \x1b[1;33m𝐎 \x1b[1;96m𝐒 \x1b[1;34m𝐄 \x1b[1;97m:\x1b[38;5;196m ')
 	if xo in ['01','1', 'A', 'a']:
 		file_create_menu().file_unlimmited()
@@ -166,11 +166,11 @@ def main_menu():
 		remove_dub()
 	if xo in ['03','3', 'C', 'c']:
 		os.system('rm -rf .token.txt')
-		linex()
+		syline()
 		animation(f"𝐋𝐎𝐆𝐆𝐄𝐃 𝐎𝐔𝐓 𝐃𝐎𝐍𝐄")
 		exit()
 	else:
-		linex()
+		syline()
 		animation('  𝐖𝐎𝐑𝐍𝐆 𝐒𝐄𝐋𝐄𝐂𝐓!  ')
 		time.sleep(1)
 		main_menu()
@@ -197,11 +197,11 @@ class file_create_menu():
 		if IOError:
 			pass
 			print(f' [•] PASTE UID ONE BY ONE ')
-			linex()
+			syline()
 			while True:
 				ids_all = input(f" [>] ENTER UID : ")
 				if ids_all == "":
-					linex()
+					syline()
 					print(f' [•] FILE SAVE AS : {lok} ')
 					input(f' [>] PRESS ENTER TO BACK ')
 					back()
@@ -245,7 +245,7 @@ class file_create_menu():
 						print(f' \x1b[38;5;196m𝐖𝐑𝐎𝐍𝐆 𝐖𝐈𝐓𝐇 {uid}\x1b[1;97m ')
 					if len(data) < 100:
 						print(f' 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐅𝐑𝐈𝐄𝐍𝐃𝐋𝐈𝐒𝐓 {uid} ')
-						linex()
+						syline()
 					else:
 						for edge in data:
 							node = edge['node']
@@ -255,7 +255,7 @@ class file_create_menu():
 						except:
 							total_idss='-'
 						print(f' 𝐒𝐔𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 𝐄𝐗𝐓𝐑𝐀𝐂𝐓𝐄𝐃 {uid} [{total_idss}] \033[0m')
-						linex()
+						syline()
 				except KeyError:
 					pass
 				except requests.exceptions.ConnectionError:
@@ -399,7 +399,7 @@ class file_create_menu():
 			os.system('clear');print(logo)
 			print(f' 𝐈𝐃𝐒 𝐒𝐀𝐕𝐄 𝐈𝐍 : {lok} ')
 			print(f' 𝐂𝐋𝐈𝐂𝐊 [ CTRL + Z ] 𝐓𝐎 𝐒𝐓𝐎𝐏 ')
-			linex()
+			syline()
 			for uid in file:
 				try:
 					headers = {"X-Graphql-Client-Library": "graphservice", "X-Graphql-Request-Purpose": "fetch",
@@ -469,12 +469,12 @@ def remove_dub():
         with open(file_path, 'w') as file:
             for line in lines:
                 file.write(line + '\n')
-        linex()
+        syline()
         print(f' 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 𝐑𝐄𝐌𝐎𝐕𝐄𝐃')
         input(f' PRESS ENTER TO BACK ')
         back()
     except FileNotFoundError:
-        linex()
+        syline()
         print(f' [{B}×{W}] FILE NOT FOUND TRY AGAIN ')
         time.sleep(2)
         remove_dub()
